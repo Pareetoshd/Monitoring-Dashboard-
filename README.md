@@ -1,4 +1,8 @@
+![image](https://github.com/user-attachments/assets/56ad6cb8-6c4f-474e-9e90-867ef0b2cda4)
+
+
 # -Monitoring-Dashboard-Prometheus-grafana Application
+
 🚀 I completed Project of AWS Cloud On, A comprehensive monitoring solution using Prometheus and
 various exporters to ensure the reliability and performance of a web application hosted on AWS EC2
 instances.
@@ -16,10 +20,12 @@ Basic knowledge of AWS services (EC2, Prometheus, Node Exporter, Black box Expor
 AWS CLI or AWS Management Console access (Git / GitHub)
 
 Step 1: Set Up AWS Environment -
+
  Step 1.1 Provision EC2 Instances : Instance Type: t2.medium, VCPUs 2 , Memory 20 GB ,
 Network Performance Moderate , Ubuntu Server 24.04 LTS , S.G - Prometheus 9090 , Alert
 manager 9093 , Black box Exporter 9115 , Node Exporter 9100 , Email transmissions 587.
 [Fig 1: Successful Creation of EC2 [VM/ Monitoring Tool Instance]
+
 Step 1.2 - Install and Configure Node Exporter and Deploy Web application on Instance 1...
 1. Install Node Exporter: Need to download different package tool we used we can get it from this
 website prometheus.io,
@@ -36,6 +42,7 @@ Run the Application: . NODE EXPORTER
 Run command java -jar database_service_project-0.0.4.jar // runs on Port 8080 on browser
 <instance_ip>:8080
 [Fig 2: Successfully Install and Configure Node Exporter & Application]
+
 Step 1.3 –: Install and Configure Prometheus, Black box Exporter, and Alert manager on Instance 2
 1. Install Prometheus -:
 Wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/pro
@@ -57,6 +64,7 @@ tar -xvf alertmanager-0.27.0.linux-amd64.tar.gz
 mv alertmanager
 cd alertmanager
 ./ alertmanager &
+
 Step 1.4 -: Configuration Files
 Prometheus Configuration (prometheus.yml) Go inside the prometheus.yml file and add these
 configurations...
@@ -178,6 +186,7 @@ severity: 'warning'
 equal: ['alertname', 'dev', 'instance']
 
 Fig 3: Successful Creation of Node Exporter, Blackbox Exporter, Prometheus, Alert manager).
+
 Conclusion –
 In this project, we created a strong monitoring system using Prometheus and its various tools to keep
 track of the reliability and performance of a web application running on AWS EC2 instances. We used
